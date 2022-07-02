@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+  <head>
+    <title>RM Software Tutorial</title>
+  </head>
+  <body>
+    <a href="index.html">HOME</a>
+    <p><strong>Developing in Linux</strong><br>
+    to start off with, open your terminal and navigate to a directory you're comfortable 
+    putting the repo in. Before you start, make sure you have pipenv installed. You can do this by
+    typing in the terminal "pip3 install pipenv", then going into your project directory
+    and typing in "pipenv install".<br><br>Once you've finished, go ahead and clone the <a href="https://github.com/JHeflinger/RM-TEMPLATE" target="_blank">template project</a> into your directory with the command "git clone "<insert link here>"". Once you've cloned the project, 
+    cd into the Project folder, and type in your terminal "pipenv shell". This instantiates 
+    your shell environment. You can think of this as opening up your environment, meaning
+    you will have to do this every time you wish to start developing. Inside the Project 
+    folder contains your src folder, and within that the main.cpp file. This will hold your
+    central program, and is what you need to be centrally concerned with coding. Go ahead
+    and poke around it and see what's happening and if you can see what the program should do!
+    <br><br>
+    Before we get ready to flash, make sure your board and ST-Link is properly plugged in!
+    If you don't know what I'm talking about, refer <a href="hardwareSetup.html" target="_blank">here</a> for setting up your hardware.
+    <br><br>
+    Now is the moment you've been waiting for, flashing the code! MAKE SURE YOU ARE IN THE 
+    "Project" DIRECTORY AND NOT THE SRC DIRECTORY!!! Go ahead and type in "scons build" in the
+    terminal. You should see a bunch of C++ compile messages for a while until it completes.
+    When you do this again later, it'll be much shorter. This command builds your code,
+    and prepares it to flash. Once this is finished, type in "scons run", and wait as you
+    flash your code! Once it's done, you should see the "A" led on your board blink! If so,
+    congratulations, you've successfully set up your development environment. To learn more
+    about the development process, go back to the home page and look at our code overview!
+    <br><br>
+    IMPORTANT: whenever you want to flash your code, you will have to use both "scons build"
+    and "scons run"!!
+    </p>
+    
+    <p><strong>Developing in Windows</strong><br>
+    iiiiimmmm gonna write this later since I kinda forgot how to lol. In the meantime, either
+    ask anthony or follow the tutorial at the bottom of the default <a href="https://github.com/JHeflinger/RM-TEMPLATE" target="_blank">template project</a>. Contact me if you have
+    any problems and such.
+    </p>
+    
+    <p><strong></strong><br>
+    </p>
+    
+    <p><strong></strong><br>
+   
+    </p>
+    
+  </body>
+</html>

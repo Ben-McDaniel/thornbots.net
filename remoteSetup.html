@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+  <head>
+    <title>RM Software Tutorial</title>
+  </head>
+  <body>
+    <a href="index.html">HOME</a><br>
+    <a href="hardwareSetup.html">BACK</a>
+    <header><strong>Remote Setup</strong></header>
+    <p><strong>Step 1</strong><br>
+    Getting the remote set up is actually pretty easy. You just need to connect your board
+    to the remote DR16 reciever, like shown in the photo, and connect your board to power.
+    IMPORTANT: your reciever will NOT connect unless your board is connected to a battery
+    or power supply. This means that plugging in your 3 volt ST-Link will not work. 
+    <br>
+    <br><img src="images/reciever.jpg" style="width:400px;height:600px">
+    </p>
+    
+    <p><strong>Step 2</strong><br>
+    Next, turn on your actual remote. There should be a box of these drone controllers
+    in our shelves in the KIC. Once your remote is on, your reciever should start to 
+    either blink green or just have a solid green LED. If it's solid, congratulations,
+    your remote is now connected! If it's blinking, you'll just have to take a small
+    pin and push it down into the hole on the reciever as shown below. Hold it down
+    until the LED starts blinking red. Then release, and wait as the LED turns solid 
+    green! If your LED is still red, bring the remote closer, or make sure your remote 
+    is charged and your board is plugged into a proper power source.
+    </p><br>
+    <img src="images/recieverClose.jpg" style="width:400px;height:600px">
+    
+    <p><strong>Step 3</strong><br>
+    Time to write your first remote code! Click <a href="mainRemote.html" target="_blank">here</a> for
+    some code to start you off with! Go ahead and copy/paste it into your main.cpp file, and play around with it. If all goes well,
+    running this code should make the "A" LED spin when you flip the left switch up!
+    </p>
+    
+  </body>
+</html>
