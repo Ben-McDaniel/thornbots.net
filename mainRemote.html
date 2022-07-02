@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+  <head>
+    <title>RM Software Tutorial</title>
+  </head>
+  <body>
+    <pre>
+#include "tap/algorithms/smooth_pid.hpp"
+#include "tap/board/board.hpp"
+#include "drivers_singleton.hpp"
+
+int main()
+{
+    /*
+     * NOTE: We are using DoNotUse_getDrivers here because in the main
+     *      robot loop we must access the singleton drivers to update
+     *      IO states and run the scheduler.
+     */
+    ::Drivers *drivers = ::DoNotUse_getDrivers();
+
+    Board::initialize();
+    drivers->remote.initialize();
+    drivers->leds.init();
+
+    bool aSet = false;
+
+    while (1)
+    {
+        drivers->remote.read();
+    
+	if(drivers->remote.isConnected()){
+		//set led on if left switch is up
+		if(drivers->remote.getSwitch(drivers->remote.Switch::LEFT_SWITCH) == drivers->remote.SwitchState::UP){
+			modm::delay_ms(500); //delay for 500 ms between flipping the LED to on or off
+        		drivers->leds.set(tap::gpio::Leds::A, !aSet); //sets the LED to either on or off according to aSet
+        		aSet = !aSet; //toggle aSet
+        	}
+        }
+
+    }
+    return 0;
+}  
+    </pre>
+  </body>
+</html>

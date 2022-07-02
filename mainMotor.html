@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+  <head>
+    <title>RM Software Tutorial</title>
+  </head>
+  <body>
+    <pre>
+#include "tap/algorithms/smooth_pid.hpp"
+#include "tap/board/board.hpp"
+#include "drivers_singleton.hpp"
+
+static constexpr tap::motor::MotorId MOTOR_ID = tap::motor::MOTOR1; //sets up the first motorID, to make another motorID, repeat this but with MOTOR2 or MOTOR3, etc instead of MOTOR1
+static constexpr tap::can::CanBus CAN_BUS = tap::can::CanBus::CAN_BUS1; //sets up the can bus
+static constexpr int DESIRED_RPM = 3000; //rpm the motor will try to get to
+
+tap::arch::PeriodicMilliTimer sendMotorTimeout(2);
+tap::algorithms::SmoothPid pidController(20, 0, 0, 0, 8000, 1, 0, 1, 0);
+tap::motor::DjiMotor motor(::DoNotUse_getDrivers(), MOTOR_ID, CAN_BUS, false, "cool motor");
+
+int main()
+{
+    /*
+     * NOTE: We are using DoNotUse_getDrivers here because in the main
+     *      robot loop we must access the singleton drivers to update
+     *      IO states and run the scheduler.
+     */
+    ::Drivers *drivers = ::DoNotUse_getDrivers();
+
+    drivers->can.initialize();
+
+    Board::initialize();
+
+    motor.initialize();
+
+    while (1)
+    {
+        if (sendMotorTimeout.execute())
+        {
+            pidController.runControllerDerivateError(DESIRED_RPM - motor.getShaftRPM(), 1);
+            motor.setDesiredOutput(static_cast<int32_t>(pidController.getOutput()));
+            drivers->djiMotorTxHandler.processCanSendData();
+        }
+
+        drivers->canRxHandler.pollCanData();
+        modm::delay_us(10);
+    }
+    return 0;
+}
+    </pre>
+  </body>
+</html>

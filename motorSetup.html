@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+  <head>
+    <title>RM Software Tutorial</title>
+  </head>
+  <body>
+    <a href="index.html">HOME</a><br>
+    <a href="hardwareSetup.html">BACK</a>
+    <header><strong>Motor Setup</strong></header>
+    <p><strong>Step 1</strong><br>
+    Gather your motor, ESC, and board. Make sure you have a working ESC. There are a lot that don't work. If it is a new ESC or has pink tape, its confirmed to be working. Connect them as shown in the photo below;
+    you'll need to connect 7 pin cable from the ESC to the motor as well as their power and 
+    etc, and then connect the CAN cable from the ESC to the board. If you don't know what
+    CAN is, it basically allows us to control all the motors as long as they're connected to
+    the CAN port, even if they're connected through each other instead of directly. 
+    <br><br>IMPORTANT: your laptop cannot provide the needed 20 volts, so you will need to 
+    provide a 20v power source to ONE of the circled areas. Do this with a BATTERY, since
+    using a power supply will likely ruin the power supply.<br>
+    <img src="images/motorsetup.jpg" style="width:400px;height:600px">
+    </p>
+    
+    <p><strong>Step 2</strong><br>
+    Plug it all in! Connect your board to your laptop, and then connect your power to your board/motor.
+    If all goes well, nothing will blow up and your motor should emit a small whirring sound.
+    </p>
+    
+    <p><strong>Step 3</strong><br>
+    Time to write your first motor code! Click <a href="mainMotor.html" target="_blank">here</a> for
+    some code to start you off with! Go ahead and copy/paste it into your main.cpp file, and play around with it. If all goes well,
+    running this code should make the motor spin!
+    </p>
+    
+  </body>
+</html>
