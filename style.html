@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>RHIT Style Guide</title>
+    </head>
+    <body>
+        <div markdown="1">
+
+            <h1 id="rhit-rm-code-style-guide">RHIT RM Code Style Guide</h1>
+            <p>Our goal with this style guide is to allow whatever code is written to be easily and fully understood by any future reader. Consistent commenting, formatting, and naming allow for the code to be better understood. When writing code it’s less important to focus specifically on code readability, and more on writing code that works and comments which explain it. Since this style guide mostly focuses on future readability and less formatting, it’s suggested that you use a linter on your code before submitting just to beautify, I recommend C Lang Tidy (<a href="http://clang.llvm.org/extra/clang-tidy/">http://clang.llvm.org/extra/clang-tidy/</a>)</p>
+            <h1 id="multi-line-comments-for-each-function">Multi-line comments for each function</h1>
+            <p>each function has a comment block above it with the same general information</p>
+            <p>’Line’ is a general term, comments should not exceed 150 characters long per line, so if a comment reaches that continue it on a newline </p>
+            <h2 id="line-1">Line 1</h2>
+            <p>What the function does [what goes in, what goes out], if the function name is self explanatory then the first line should be “functionName()”, our goal is to have almost all of our functions like this, but some it will not be possible for </p>
+            <h2 id="line-2">Line 2</h2>
+            <p>What data is used, not just the data types that are inputs, where specifically you would get that data from (sensor, value you create, passed by other function, ect)</p>
+            <h2 id="line-3">Line 3</h2>
+            <p>How the function works [how does it do your answer to line 1], this should be to a pretty high level of specificity, if someone were to read this description of your code, they could recreate it very closely</p>
+            <h2 id="line-4">Line 4</h2>
+            <p>Design philosophy, this is a very short statement of why you wrote it a certain way, this can be something like “this was the most straight forward”, “this method avoided using nested loops”, or “dji motors require that we do <strong>__</strong>”, just something so that a future reader would understand why you chose to do something, and would know why anything weird was happening</p>
+            <h1 id="naming-conventions">Naming Conventions</h1>
+            <p>Variables follow lower_upper_upper</p>
+            <p>Functions follow lowerUpperUpper</p>
+            <p>Limit to &lt;15 charcters </p>
+            <p>Contents should be what the data is followed by an identifier </p>
+            <p>Ex. making a list of all the motors  </p>
+            <ul>
+            <li>motors = [] would not be acceptable</li>
+            </ul>
+            <ul>
+            <li>motor_List = [] would be good </li>
+            </ul>
+            <h1 id="misc-guidelines">Misc. Guidelines</h1>
+            <p> use &#39;i&#39; as standard incrementer </p>
+            <p> braces should start on the line of declaration</p>
+            <p>Ex.
+            int main(){</p>
+            <p>}</p>
+            <p>split blocks of code with newlines, each chunk of code must receive a small comment explaining its function except for variable declaration which can be done if there is ambiguity in variable assignment </p>
+            
+        </div>
+    </body>
+</html>
