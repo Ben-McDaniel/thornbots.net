@@ -1,7 +1,7 @@
 .fa {
     padding: 20px;
     font-size: 60px;
-    width: 8%;
+    width: fit-content;
     text-align: center;
     text-decoration: none;
     margin: 2px 2px;
