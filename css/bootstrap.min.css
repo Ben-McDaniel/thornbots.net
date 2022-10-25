@@ -2545,7 +2545,7 @@
   }
   .btn-primary {
     color: #000;
-    background-color: #800000;
+    background-color: #bb0000;
     border-color: #800000;
   }
   .btn-primary:hover {
@@ -5561,7 +5561,7 @@
     right: 15%;
     bottom: 1.25rem;
     left: 15%;
-    padding-top: 1.25rem;
+    
     padding-bottom: 1.25rem;
     color: #fff;
     text-align: center;

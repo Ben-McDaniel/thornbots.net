@@ -1,0 +1,28 @@
+.fa {
+    padding: 20px;
+    font-size: 60px;
+    width: 8%;
+    text-align: center;
+    text-decoration: none;
+    margin: 2px 2px;
+    border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+.fa-twitter {
+    background: #bb0000;
+    color: white;
+}
+
+.fa-youtube {
+    background: #bb0000;
+    color: white;
+}
+
+.fa-instagram {
+    background: #bb0000;
+    color: white;
+}
+  
