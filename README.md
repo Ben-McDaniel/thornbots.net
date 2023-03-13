@@ -12,6 +12,7 @@ Socials
 Want to join the team?  
 [![discord](https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/jRsZXSR5GN)
 ## Maintainers  
+- [@V Brunkow](https://github.com/rhit-brunkocl)
 - [@Ben McDaniel](https://github.com/Ben-McDaniel)  
 - [@Jason Heflinger](https://github.com/JHeflinger)  
 
