@@ -141,6 +141,7 @@
     }
 
     .carousel-caption h1 {
+        padding-top: 20vh;
         font-size: 30px;
         font-weight: 600 !important;
     }
