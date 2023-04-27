@@ -118,7 +118,7 @@
     color: var(--primary);
 }
 
-@media (max-width: 991.98px) {
+@media (max-width: 100%) {
     .navbar-dark .navbar-nav .nav-link  {
         margin-left: 0;
         padding: 10px 0;
